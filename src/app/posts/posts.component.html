@@ -1,0 +1,42 @@
+
+
+
+<div class="container">
+
+
+<h1>HELP! I Lost Stuff!</h1>
+<h2>I have...</h2>
+<select class="form-select" aria-label="Default select example">
+  <option value="lost" >found something</option>
+  <option value="found">lost something</option>
+
+</select>
+
+
+
+<div *ngFor="let post of posts.data" class="post">
+
+  <h2>{{post.attributes.Title}}</h2>
+  <div class="image">
+      {{post.attributes.Image}}
+  </div>
+  <div class="description">
+   {{post.attributes.Description}}
+  </div>
+
+  <p>{{post.attributes.Claim}}</p>
+
+  <div>
+    <p>Date found : {{post.attributes.Date_found}}</p>
+    <p>Location : {{post.attributes.Location}}</p>
+    <p>Email: {{post.attributes.Email}}</p>
+    <p>Phone Number : {{post.attributes.Phonenumber}}</p>
+  </div>
+
+
+
+
+</div>
+
+
+</div>
