@@ -9,12 +9,12 @@ import { PostsComponent } from './posts/posts.component';
 @NgModule({
   declarations: [
     AppComponent,
-    PostsComponent
+    PostsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
