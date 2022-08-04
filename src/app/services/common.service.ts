@@ -1,22 +1,24 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-
-
+import { LostItem } from '../interface/interface';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CommonService {
 
-  constructor(private http: HttpClient) { }
-private projectsurl = "https://hammerhead-app-lb3j6.ondigitalocean.app/api/lost-and-founds";
+constructor(private http: HttpClient) { }
 
-
+private projectsurl = "https://cms.yukayamamoto.me/api/lost-and-founds";
 
 // get
 
 getAllposts(){
   return this.http.get(this.projectsurl);
+}
+
+getPostByID(id:number) {
+  return this.http.get<{data:LostItem}>(this.projectsurl + "/" + id);
 }
 
 // add posts
@@ -52,13 +54,6 @@ getAllposts(){
 
 
 // }
-
-
-
-
-
-
-
 
 
 }
