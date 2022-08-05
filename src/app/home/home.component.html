@@ -31,9 +31,9 @@
 </div> -->
 
 
-<div class="accordion" id="accordionPanelsStayOpenExample container">
+<!-- <div class="accordion" id="accordionPanelsStayOpenExample container">
   <div class="accordion-item" *ngFor="let post of posts.data" class="post">
-    <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+    <h2 class="accordion-header" [id]="'panelsStayOpen-headingOne'+post.id">
       <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
       <div class="container title">
         <div class="row">
@@ -47,9 +47,9 @@
           <div class="col-6">
             <img class="image" src="https://cdn.vox-cdn.com/thumbor/6p3i4vIm2bWpSCt3hZUi8gIyuB8=/0x0:2040x1360/1520x1013/filters:focal(877x866:1203x1192):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/66397697/akrales_181019_3014_0770.0.jpg">
           </div>
-        </div>
+        </div> -->
           <!-- <p>Sub-heading</p> -->
-      </div>
+      <!-- </div>
       </button>
     </h2>
     <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
@@ -63,12 +63,12 @@
           </div>
 
           <p>Date Found:{{post.attributes.Date_found}}</p>
-          <p>Location Found:{{post.attributes.Location}}</p>
+          <p>Location Found:{{post.attributes.Location}}</p> -->
                 <!-- Toggle Btn -->
-                <button (click)="getInfo()"  class="btn btn-primary">CLAM</button>
+                <!-- <button (click)="getInfo()"  class="btn btn-primary">CLAM</button> -->
 
         <!-- Contact Info -->
-        <div [class.active]="showInfo" class="contact-information">
+        <!-- <div [class.active]="showInfo" class="contact-information">
           <div class="card-container">
             <div class="float-layout">
               <div class="card-image">
@@ -92,4 +92,64 @@
       </div>
     </div>
   </div>
+</div> -->
+
+<!-- <div class="box"[ngClass]="{"clicked":}"></div> -->
+<div>
+  <card *ngFor="let p of posts.data"
+    [claim_name]="p.attributes.claim_name"
+    [image]="p.attributes.Image"
+    [desc]="p.attributes.Description"
+    [email]="p.attributes.Email"
+    [found]="false"
+    [Iquestion]="p.attributes.Identifying_question"
+    [Location]="p.attributes.Location"
+    [phone]="p.attributes.Phonenumber"
+    [title]="p.attributes.Title"
+    >
+    <!-- waiting for back end to fix found value -->
+    </card>
+    <!-- i should've made this smaller -->
 </div>
+<!-- Claim
+:
+false
+Claim_name
+:
+"test name"
+Close
+:
+false
+Date_found
+:
+"08/04/22"
+Description
+:
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit est elit, eget convallis augue vestibulum non. Vestibulum non neque laoreet, scelerisque nulla facilisis, rutrum lectus. Cras at sodales augue, ut vulputate odio. Etiam et rutrum libero. Vestibulum nunc tortor, aliquam quis lorem eget, interdum sodales quam. Nam nunc lorem, sollicitudin quis auctor venenatis, vestibulum a quam. Sed lorem purus, efficitur interdum elementum id, pretium ut neque."
+Email
+:
+"test@test.com"
+FoundBoolean
+:
+null
+Identifying_question
+:
+"test question"
+Image
+:
+"https://images.unsplash.com/photo-1521369909029-2afed882baee?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+Location
+:
+"test location"
+LostBoolean
+:
+null
+LostOrFound
+:
+"Found"
+Phonenumber
+:
+"000-000-000"
+Title
+:
+"Found test post" -->

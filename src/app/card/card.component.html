@@ -1,0 +1,23 @@
+<div class="card" (click)="open=!open">
+  <div class="pic"><img src="{{image}}" alt=""></div>
+  <div class="info">
+      <h2 class="isfound" [innerText]="isfound(found)"></h2>
+      <h1 class="title">{{title}}</h1>
+      <button>Claim</button>
+      <!-- this part is hidden by default -->
+      <div class="info" [ngClass]="{'hidden':!open}">
+        <p class="desc"[innerText]="desc">{{desc}}</p>
+        <h2 class="contact">Contact</h2>
+          <label for="name">name</label>
+            <p id="name" class="contact_info">{{claim_name}}</p>
+          <label for="phone">Phone</label>
+            <p id="phone" class="contact_info">{{phone}}</p>
+          <label for="email">email</label>
+            <p id="email" class="contact_info">{{email}}</p>
+      </div>
+      <!--  -->
+  </div>
+
+</div>
+<!-- TODO figure out th CSS -->
+<!-- the card works -->

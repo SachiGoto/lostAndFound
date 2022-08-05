@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { PostdetailsComponent } from './postdetails/postdetails.component';
 import { LostInputComponent } from './lost-input/lost-input.component';
 import { FoundInputComponent } from './found-input/found-input.component';
+import { CardComponent } from './card/card.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { FoundInputComponent } from './found-input/found-input.component';
     PostdetailsComponent,
     LostInputComponent,
     FoundInputComponent,
+    CardComponent,
   ],
   imports: [
     BrowserModule,
