@@ -21,14 +21,19 @@ getPostByID(id:number) {
   return this.http.get<{data:LostItem}>(this.projectsurl + "/" + id);
 }
 
-update(close:boolean){
+update(id:number){
 
   let closeBody={
 
-    close:close
+      "data":{
+
+        "Close": true
+
+      }
+
 
 }
-return this.http.post(this.projectsurl, closeBody);
+return this.http.put(this.projectsurl + '/' + id, closeBody);
 }
 
 

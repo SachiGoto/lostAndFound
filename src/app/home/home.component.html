@@ -53,7 +53,7 @@
              <div class="email"><span class="bold">Email: </span>{{post.attributes.Email}}</div>
              <div class="phoneNumber" ><span class="bold">Phone Number: </span>{{post.attributes.Phonenumber}}</div>
 
-             <button (click)="closeItem(listcontainer, post.attributes.Close)" class="btn btn-primary claimButton">Close</button>
+             <button (click)="closeItem(listcontainer, post.id, post.attributes.Close)" class="btn btn-primary claimButton">Close</button>
           </div>
           </div>
         </div>

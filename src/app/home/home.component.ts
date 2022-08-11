@@ -82,7 +82,7 @@ getDescription(description:any){
   }
 }
 
-closeItem(listcontainer:any, close:boolean){
+closeItem(listcontainer:any, id:number, close:boolean){
 
 
   if(listcontainer.style.display == "none"){
@@ -95,6 +95,24 @@ closeItem(listcontainer:any, close:boolean){
 
   close = !close;
 
+this.http.update(id).subscribe(res=>{
+
+  // let closeBody={
+
+  //   "data":{
+
+  //     "Close":!close
+
+  //   }
+
+
+  // }
+
+  console.log("res is ", res);
+
+
+
+})
 
 
 
