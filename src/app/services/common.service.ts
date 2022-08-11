@@ -21,6 +21,23 @@ getPostByID(id:number) {
   return this.http.get<{data:LostItem}>(this.projectsurl + "/" + id);
 }
 
+update(close:boolean){
+
+  let closeBody={
+
+    close:close
+
+}
+return this.http.post(this.projectsurl, closeBody);
+}
+
+
+
+
+
+
+
+
 // add posts
 
 // addPost(albumId_fromC:number, title_fromC:string, url_fromC:string){

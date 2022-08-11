@@ -11,6 +11,11 @@ export class HomeComponent implements OnInit {
   posts:any = [];
   showInfo:boolean = false;
 
+
+
+
+  hidden:boolean=true;
+
   constructor(private http:CommonService) { }
 
   // json:LostItem[]=[ {"data":{id:1,
@@ -31,9 +36,71 @@ export class HomeComponent implements OnInit {
   // }
   // ]
 
-  getInfo(){
-      this.showInfo = !this.showInfo;
+  // getInfo(button:any){
+  //     // this.showInfo = !this.showInfo;
+  //     console.log(button);
+
+  //     // this.hidden = !this.hidden;
+  // }
+
+//   getInfo(button: HTMLButtonElement, contactInfo:any) {
+//     // Do logic here
+//     // button.style.backgroundColor = desiredColor;
+//     this.showInfo = !this.showInfo;
+//     console.log(button);
+//     console.log(contactInfo);
+
+
+//     // this.showInfo = !this.showInfo;
+// }
+
+
+
+status="none";
+
+
+getInfo( contactInfo:any) {
+  // Do logic here
+
+
+
+
+  // console.log("contact info is " , contactInfo)
+  if(contactInfo.style.display == "none"){
+  contactInfo.style.display = "block"; // example: "#f00"
+}else{
+  contactInfo.style.display = "none";
+}
+
+}
+
+getDescription(description:any){
+  if(description.style.display == "none"){
+    description.style.display = "block"; // example: "#f00"
+  }else{
+    description.style.display = "none";
   }
+}
+
+closeItem(listcontainer:any, close:boolean){
+
+
+  if(listcontainer.style.display == "none"){
+    listcontainer.style.display = "block"; // example: "#f00"
+  }else{
+    listcontainer.style.display = "none";
+
+  }
+
+
+  close = !close;
+
+
+
+
+}
+
+  public isCollapsed: boolean[] = [];
 
   ngOnInit(): void {
     this.http.getAllposts().subscribe(posts =>{
@@ -41,6 +108,21 @@ export class HomeComponent implements OnInit {
       console.log(this.posts)
    })
 
+
+
+
+
   }
 
+
+
+
+
+
+
+
+
+
 }
+
+

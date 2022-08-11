@@ -1,3 +1,10 @@
+.mainContainer{
+    width:80%;
+    margin:100px auto;
+
+}
+
+
 .submit_wrapper {
   padding: 16px;
   background-color: cornflowerblue;
@@ -34,7 +41,7 @@
   display: none;
 }
 
-.contact-information.active{
+.active{
   display: block;
 }
 .card-desc {
@@ -65,4 +72,89 @@ div.card-image img {
       justify-content: space-between;
     }
   }
+}
+
+.buttonRow{
+  display: flex;
+    justify-content: center;
+
+}
+
+
+.submitButton{
+  border: 2px solid black;
+  color: white;
+  font-weight: bold;
+  box-shadow: 5px 5px #888888;
+
+}
+
+.heading{
+  padding-top: 75px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.listContainer{
+  padding-top: 50px;
+}
+
+.itemCard{
+  padding: 30px;
+  width: 70%;
+  border-radius: 20px;
+  background-color: #F8F2F2;
+  box-shadow: 5px 5px blue;
+  margin:0 auto;
+
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  .itemInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0.5rem;
+
+    .status{
+      color: blue;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    .itemName{
+      font-size: 3rem;
+      font-weight: bold;
+    }
+
+  }
+
+  .itemImage{
+    // background-image: url(../../assets/reuse_keys_xl.jpg);
+    background-position: center center;
+    background-size: cover;
+    min-height: 200px;
+  }
+
+
+  .claimButton{
+    border: 2px solid black;
+    color: white;
+    font-weight: bold;
+    box-shadow: 5px 5px #888888;
+  }
+
+  .bold{
+    font-weight: bold;
+  }
+
+  .button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
 }
